@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input, button {
+            display: block;
+            margin-top: 5px;
+            padding: 5px;
+            font-size: 16px;
+        }
+        button {
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 8px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            color: #333;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #e2e2e2;
+        }
+    </style>
+</head>
+<body>
+<h1>User Management</h1>
+<script defer src="../js/js_client.js"></script>
+
+<section>
+    <h2>Get Users</h2>
+    <button id="get_users_button">Get Users</button><br>
+    <label for="get_id_user">User ID:</label>
+    <table id="users_table"></table>
+    <input id="get_id_user" placeholder="ID of the user"><br>
+    <table id="user_table"></table>
+    <button id="get_id_user_button">Get User by ID</button><br>
+</section>
+
+<section>
+    <h2>Post User</h2>
+    <form id="post_user_form">
+        <label for="post_name_user">Name:</label>
+        <input name="nameUser" id="post_name_user" placeholder="Name">
+
+        <label for="post_age_user">Age:</label>
+        <input type="number" name="ageUser" id="post_age_user" placeholder="Age">
+
+        <label for="post_password_user">Password:</label>
+        <input type="password" name="passwordUser" id="post_password_user" placeholder="Password">
+
+        <label for="post_email_user">Email:</label>
+        <input type="email" name="emailUser" id="post_email_user" placeholder="Email">
+
+        <button type="submit" id="post_user_button">Post User</button>
+    </form>
+</section>
+
+<section>
+    <h2>Patch User</h2>
+    <label for="patch_user">User ID:</label>
+    <input id="patch_user" placeholder="ID of the user">
+    <button id="patch_user_button">Patch User</button>
+
+    <form id="patch_user_form" style="display: none">
+        <label for="patch_name">Name:</label>
+        <input id="patch_name" placeholder="New Name">
+
+        <label for="patch_age_user">Age:</label>
+        <input type="number" id="patch_age_user" placeholder="New Age">
+
+        <label for="patch_password_user">Password:</label>
+        <input type="password" id="patch_password_user" placeholder="New Password">
+
+        <label for="patch_email_user">Email:</label>
+        <input type="email" id="patch_email_user" placeholder="New Email">
+
+        <button type="submit" id="patch_user_button_form">Patch User</button>
+    </form>
+</section>
+
+<section>
+    <h2>Delete User</h2>
+    <label for="delete_user_by_id">User ID:</label>
+    <input id="delete_user_by_id" placeholder="ID of the user">
+    <button id="delete_user_by_id_button">Delete User by ID</button>
+    <button id="delete_users_button">Delete All Users</button>
+</section>
+
+
+
+<section>
+    <h2>Get Tasks</h2>
+    <button id="get_tasks_button">Get Tasks</button><br>
+    <label for="get_id_task">Task ID:</label>
+    <table id="tasks_table"></table>
+    <input id="get_id_task" placeholder="ID of the user"><br>
+    <table id="task_table"></table>
+    <button id="get_id_task_button">Get Task by ID</button><br>
+</section>
+
+<section>
+    <h2>Post Task</h2>
+    <form id="post_task_form">
+        <label for="post_title_task">Title:</label>
+        <input name="title" id="post_title_task" placeholder="Title">
+
+        <label for="post_description_task">Desciption:</label>
+        <textarea name="description" id="post_description_task" placeholder="Desciption"></textarea>
+
+        <label for="post_comleted_task">Is Comlete:</label>
+        <input type="radio" name="completed" id="post_comleted_task" placeholder="">
+
+        <button type="submit" id="post_task_button">Post Task</button>
+    </form>
+</section>
+
+<section>
+    <h2>Patch Task</h2>
+    <label for="patch_task">Task ID:</label>
+    <input id="patch_task" placeholder="ID of the task">
+    <button id="patch_task_button">Patch Task</button>
+
+    <form id="patch_task_form" style="display: none">
+        <label for="patch_title">Title:</label>
+        <input id="patch_title" placeholder="Title">
+
+        <label for="patch_desciption">Desciption:</label>
+        <textarea id="patch_desciption" placeholder="Desciption"></textarea>
+
+        <label for="patch_comleted_task">Is Comlete:</label>
+        <input type="radio" name="completed" id="patch_comleted_task" placeholder="">
+
+        <button type="submit" id="patch_task_button_form">Patch Task</button>
+    </form>
+</section>
+
+<section>
+    <h2>Delete Task</h2>
+    <label for="delete_task_by_id">Task ID:</label>
+    <input id="delete_task_by_id" placeholder="ID of the task">
+    <button id="delete_task_by_id_button">Delete Task by ID</button>
+    <button id="delete_tasks_button">Delete All Task</button>
+</section>
+
+</body>
+</html>
